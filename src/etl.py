@@ -11,7 +11,7 @@ def run_etl():
     
     #Validación de fechas
     df["fecha_cita"] = df["fecha_cita"].str.replace("/", "-", regex=False)
-    df["fecha_cita"] = pd.to_datetime(df["fecha_cita"],errors="coerce",infer_datetime_format=True)
+    df["fecha_cita"] = pd.to_datetime(df["fecha_cita"],errors="coerce")
 
 
     #Reglas del negocio
